@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Parallel testing" parallel="methods">
+  <test name="Chrome Test">
+  <parameter name="browser" value="chrome"></parameter>
+    <classes>
+      <class name="testScript.LoginTest">
+      <methods><include name="verifyTheUserIsAbleToLoginUsingValidCredentials"></include>
+      <include name="verifyTheUserIsUnableToLoginUsingWrongPassword"></include></methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
