@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constant.Constant;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ManageCategoryPage;
@@ -39,7 +40,7 @@ public class ManageCategoryTest extends Base{
 //		managecategory.clickSaveButton();
 		
 		String alertSuccess=categoryPage.getAlertText();
-		Assert.assertTrue(alertSuccess.contains("Category Created Successfully"));
+		Assert.assertTrue(alertSuccess.contains("Category Created Successfully"),Constant.CATEGORYEXISTSMSG);
 		
 	}
 		

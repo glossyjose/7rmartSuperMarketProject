@@ -14,6 +14,7 @@ public class LoginPage {
 	
 	public WebDriver driver;
 	
+	
 	public LoginPage(WebDriver driver) //parameterized constructor
 	{
 		this.driver=driver;

@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results retried="1" ignored="0" total="4" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-28T20:27:17 IST" name="Multi browser testing" finished-at="2026-04-28T20:27:26 IST" duration-ms="9311">
+  <suite started-at="2026-04-29T09:58:05 IST" name="Suite" finished-at="2026-04-29T09:58:24 IST" duration-ms="19490">
     <groups>
+      <group name="regression">
+        <method signature="LoginTest.verifyTheUserIsAbleToLoginUsingValidCredentials()[pri:1, instance:testScript.LoginTest@74287ea3]" name="verifyTheUserIsAbleToLoginUsingValidCredentials" class="testScript.LoginTest"/>
+      </group> <!-- regression -->
       <group name="sanity">
-        <method signature="ManageFooterTextTest.validateManageFooterText()[pri:0, instance:testScript.ManageFooterTextTest@38425407]" name="validateManageFooterText" class="testScript.ManageFooterTextTest"/>
+        <method signature="LoginTest.verifyTheUserIsUnableToLoginUsingWrongPassword()[pri:2, instance:testScript.LoginTest@74287ea3]" name="verifyTheUserIsUnableToLoginUsingWrongPassword" class="testScript.LoginTest"/>
+        <method signature="LoginTest.verifyTheUserIsUnableToLoginUsingInvalidCredentials()[pri:4, instance:testScript.LoginTest@74287ea3]" name="verifyTheUserIsUnableToLoginUsingInvalidCredentials" class="testScript.LoginTest"/>
       </group> <!-- sanity -->
     </groups>
-    <test started-at="2026-04-28T20:27:17 IST" name="Test2" finished-at="2026-04-28T20:27:20 IST" duration-ms="3011">
-      <class name="testScript.HomeTest">
-        <test-method is-config="true" signature="browserInitialization(java.lang.String)[pri:0, instance:testScript.HomeTest@609cd4d8]" started-at="2026-04-28T20:27:17 IST" name="browserInitialization" finished-at="2026-04-28T20:27:20 IST" duration-ms="2662" status="PASS">
+    <test started-at="2026-04-29T09:58:05 IST" name="Test" finished-at="2026-04-29T09:58:24 IST" duration-ms="19490">
+      <class name="testScript.LoginTest">
+        <test-method is-config="true" signature="browserInitialization(java.lang.String)[pri:0, instance:testScript.LoginTest@74287ea3]" started-at="2026-04-29T09:58:10 IST" name="browserInitialization" finished-at="2026-04-29T09:58:13 IST" duration-ms="2310" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -21,57 +25,121 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitialization -->
-        <test-method signature="verifyLogout()[pri:0, instance:testScript.HomeTest@609cd4d8]" started-at="2026-04-28T20:27:20 IST" name="verifyLogout" description="This testcase is to validate that the user is successfully logged out from the application" finished-at="2026-04-28T20:27:20 IST" duration-ms="124" status="FAIL">
-          <exception class="org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException">
-            <message>
-              <![CDATA[No valid entries or contents found, this is not a valid OOXML (Office Open XML) file]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file
-at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:156)
-at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.<init>(ZipInputStreamZipEntrySource.java:94)
-at org.apache.poi.openxml4j.opc.ZipPackage.<init>(ZipPackage.java:132)
-at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:319)
-at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59)
-at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:290)
-at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286)
-at utilities.ExcelUtility.getStringData(ExcelUtility.java:22)
-at testScript.HomeTest.verifyLogout(HomeTest.java:14)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: java.util.zip.ZipException: Unexpected record signature: 0X0
-at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.getNextZipEntry(ZipArchiveInputStream.java:296)
-at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:152)
-... 28 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException -->
+        <test-method signature="verifyTheUserIsAbleToLoginUsingValidCredentials()[pri:1, instance:testScript.LoginTest@74287ea3]" started-at="2026-04-29T09:58:13 IST" name="verifyTheUserIsAbleToLoginUsingValidCredentials" description="This testcase is to validate that the user is successfully logged in to the web application using valid credentials" finished-at="2026-04-29T09:58:14 IST" duration-ms="1047" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLogout -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testScript.HomeTest@609cd4d8]" started-at="2026-04-28T20:27:20 IST" name="browserQuit" finished-at="2026-04-28T20:27:20 IST" duration-ms="193" status="PASS">
+        </test-method> <!-- verifyTheUserIsAbleToLoginUsingValidCredentials -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testScript.LoginTest@74287ea3]" started-at="2026-04-29T09:58:14 IST" name="browserQuit" finished-at="2026-04-29T09:58:14 IST" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyLogout status=FAILURE method=HomeTest.verifyLogout()[pri:0, instance:testScript.HomeTest@609cd4d8] output={null}]]]>
+                <![CDATA[[TestResult name=verifyTheUserIsAbleToLoginUsingValidCredentials status=SUCCESS method=LoginTest.verifyTheUserIsAbleToLoginUsingValidCredentials()[pri:1, instance:testScript.LoginTest@74287ea3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserQuit -->
+        <test-method is-config="true" signature="browserInitialization(java.lang.String)[pri:0, instance:testScript.LoginTest@74287ea3]" started-at="2026-04-29T09:58:14 IST" name="browserInitialization" finished-at="2026-04-29T09:58:16 IST" duration-ms="2607" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserInitialization -->
+        <test-method signature="verifyTheUserIsUnableToLoginUsingWrongPassword()[pri:2, instance:testScript.LoginTest@74287ea3]" started-at="2026-04-29T09:58:16 IST" name="verifyTheUserIsUnableToLoginUsingWrongPassword" description="This testcase is to validate that the user is unable to login to the web application when wrong password is entered" finished-at="2026-04-29T09:58:17 IST" duration-ms="713" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTheUserIsUnableToLoginUsingWrongPassword -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testScript.LoginTest@74287ea3]" started-at="2026-04-29T09:58:17 IST" name="browserQuit" finished-at="2026-04-29T09:58:17 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyTheUserIsUnableToLoginUsingWrongPassword status=SUCCESS method=LoginTest.verifyTheUserIsUnableToLoginUsingWrongPassword()[pri:2, instance:testScript.LoginTest@74287ea3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserQuit -->
+        <test-method is-config="true" signature="browserInitialization(java.lang.String)[pri:0, instance:testScript.LoginTest@74287ea3]" started-at="2026-04-29T09:58:17 IST" name="browserInitialization" finished-at="2026-04-29T09:58:20 IST" duration-ms="2496" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserInitialization -->
+        <test-method signature="verifyTheUserIsUnableToLoginUsingWrongUserName()[pri:3, instance:testScript.LoginTest@74287ea3]" started-at="2026-04-29T09:58:20 IST" name="verifyTheUserIsUnableToLoginUsingWrongUserName" description="This testcase is to validate that the user is unable to login to the web application when wrong username is entered" finished-at="2026-04-29T09:58:20 IST" duration-ms="724" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTheUserIsUnableToLoginUsingWrongUserName -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testScript.LoginTest@74287ea3]" started-at="2026-04-29T09:58:20 IST" name="browserQuit" finished-at="2026-04-29T09:58:20 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyTheUserIsUnableToLoginUsingWrongUserName status=SUCCESS method=LoginTest.verifyTheUserIsUnableToLoginUsingWrongUserName()[pri:3, instance:testScript.LoginTest@74287ea3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserQuit -->
+        <test-method is-config="true" signature="browserInitialization(java.lang.String)[pri:0, instance:testScript.LoginTest@74287ea3]" started-at="2026-04-29T09:58:20 IST" name="browserInitialization" finished-at="2026-04-29T09:58:24 IST" duration-ms="3172" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserInitialization -->
+        <test-method signature="verifyTheUserIsUnableToLoginUsingInvalidCredentials()[pri:4, instance:testScript.LoginTest@74287ea3]" started-at="2026-04-29T09:58:24 IST" name="verifyTheUserIsUnableToLoginUsingInvalidCredentials" description="This testcase is to validate that the user is unable to login to the web application when both the credentials are wrong" finished-at="2026-04-29T09:58:24 IST" duration-ms="699" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTheUserIsUnableToLoginUsingInvalidCredentials -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testScript.LoginTest@74287ea3]" started-at="2026-04-29T09:58:24 IST" name="browserQuit" finished-at="2026-04-29T09:58:24 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyTheUserIsUnableToLoginUsingInvalidCredentials status=SUCCESS method=LoginTest.verifyTheUserIsUnableToLoginUsingInvalidCredentials()[pri:4, instance:testScript.LoginTest@74287ea3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserQuit -->
+      </class> <!-- testScript.LoginTest -->
+      <class name="testScript.HomeTest">
+        <test-method is-config="true" signature="browserInitialization(java.lang.String)[pri:0, instance:testScript.HomeTest@7d322cad]" started-at="2026-04-29T09:58:05 IST" name="browserInitialization" finished-at="2026-04-29T09:58:08 IST" duration-ms="3163" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserInitialization -->
+        <test-method signature="verifyLogout()[pri:0, instance:testScript.HomeTest@7d322cad]" started-at="2026-04-29T09:58:08 IST" name="verifyLogout" description="This testcase is to validate that the user is successfully logged out from the application" finished-at="2026-04-29T09:58:10 IST" duration-ms="2462" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogout -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testScript.HomeTest@7d322cad]" started-at="2026-04-29T09:58:10 IST" name="browserQuit" finished-at="2026-04-29T09:58:10 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLogout status=SUCCESS method=HomeTest.verifyLogout()[pri:0, instance:testScript.HomeTest@7d322cad] output={null}]]]>
               </value>
             </param>
           </params>
@@ -79,141 +147,6 @@ at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(Zip
           </reporter-output>
         </test-method> <!-- browserQuit -->
       </class> <!-- testScript.HomeTest -->
-    </test> <!-- Test2 -->
-    <test started-at="2026-04-28T20:27:17 IST" name="Test1" finished-at="2026-04-28T20:27:22 IST" duration-ms="5598">
-      <class name="testScript.ManageFooterTextTest">
-        <test-method is-config="true" signature="browserInitialization(java.lang.String)[pri:0, instance:testScript.ManageFooterTextTest@38425407]" started-at="2026-04-28T20:27:17 IST" name="browserInitialization" finished-at="2026-04-28T20:27:20 IST" duration-ms="2786" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserInitialization -->
-        <test-method signature="validateManageFooterText()[pri:0, instance:testScript.ManageFooterTextTest@38425407]" started-at="2026-04-28T20:27:20 IST" name="validateManageFooterText" description="This testcase is to validate that the content displayed in the footer section can be updated from the Manage Footer Text page" finished-at="2026-04-28T20:27:22 IST" duration-ms="2781" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateManageFooterText -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testScript.ManageFooterTextTest@38425407]" started-at="2026-04-28T20:27:22 IST" name="browserQuit" finished-at="2026-04-28T20:27:22 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=validateManageFooterText status=SUCCESS method=ManageFooterTextTest.validateManageFooterText()[pri:0, instance:testScript.ManageFooterTextTest@38425407] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserQuit -->
-      </class> <!-- testScript.ManageFooterTextTest -->
-    </test> <!-- Test1 -->
-    <test started-at="2026-04-28T20:27:17 IST" name="Test3" finished-at="2026-04-28T20:27:26 IST" duration-ms="9311">
-      <class name="testScript.ManageCategoryTest">
-        <test-method is-config="true" signature="browserInitialization(java.lang.String)[pri:0, instance:testScript.ManageCategoryTest@158a8276]" started-at="2026-04-28T20:27:17 IST" name="browserInitialization" finished-at="2026-04-28T20:27:20 IST" duration-ms="2661" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserInitialization -->
-        <test-method retried="true" signature="validateManageCategory()[pri:0, instance:testScript.ManageCategoryTest@158a8276]" started-at="2026-04-28T20:27:20 IST" name="validateManageCategory" description="This testcase is to validate that a new category can be created successfully with discount group" finished-at="2026-04-28T20:27:20 IST" duration-ms="165" status="SKIP">
-          <exception class="java.io.IOException">
-            <message>
-              <![CDATA[Stream Closed]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.io.IOException: Stream Closed
-at java.base/java.io.FileInputStream.available0(Native Method)
-at java.base/java.io.FileInputStream.available(FileInputStream.java:473)
-at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:428)
-at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:399)
-at java.base/java.io.FilterInputStream.read(FilterInputStream.java:119)
-at java.base/java.io.PushbackInputStream.read(PushbackInputStream.java:197)
-at org.apache.commons.compress.utils.IOUtils.copyRange(IOUtils.java:330)
-at org.apache.commons.compress.utils.IOUtils.copyRange(IOUtils.java:301)
-at org.apache.commons.compress.utils.IOUtils.readRange(IOUtils.java:350)
-at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readRange(ZipArchiveInputStream.java:884)
-at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.getNextZipEntry(ZipArchiveInputStream.java:348)
-at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:152)
-at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.<init>(ZipInputStreamZipEntrySource.java:94)
-at org.apache.poi.openxml4j.opc.ZipPackage.<init>(ZipPackage.java:132)
-at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:319)
-at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59)
-at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:290)
-at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286)
-at utilities.ExcelUtility.getStringData(ExcelUtility.java:22)
-at testScript.ManageCategoryTest.validateManageCategory(ManageCategoryTest.java:19)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.io.IOException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateManageCategory -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testScript.ManageCategoryTest@158a8276]" started-at="2026-04-28T20:27:20 IST" name="browserQuit" finished-at="2026-04-28T20:27:20 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=validateManageCategory status=SKIP method=ManageCategoryTest.validateManageCategory()[pri:0, instance:testScript.ManageCategoryTest@158a8276] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserQuit -->
-        <test-method is-config="true" signature="browserInitialization(java.lang.String)[pri:0, instance:testScript.ManageCategoryTest@158a8276]" started-at="2026-04-28T20:27:20 IST" name="browserInitialization" finished-at="2026-04-28T20:27:22 IST" duration-ms="2016" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserInitialization -->
-        <test-method signature="validateManageCategory()[pri:0, instance:testScript.ManageCategoryTest@158a8276]" started-at="2026-04-28T20:27:22 IST" name="validateManageCategory" description="This testcase is to validate that a new category can be created successfully with discount group" finished-at="2026-04-28T20:27:26 IST" duration-ms="4434" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateManageCategory -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testScript.ManageCategoryTest@158a8276]" started-at="2026-04-28T20:27:26 IST" name="browserQuit" finished-at="2026-04-28T20:27:26 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=validateManageCategory status=SUCCESS method=ManageCategoryTest.validateManageCategory()[pri:0, instance:testScript.ManageCategoryTest@158a8276] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserQuit -->
-      </class> <!-- testScript.ManageCategoryTest -->
-    </test> <!-- Test3 -->
-  </suite> <!-- Multi browser testing -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

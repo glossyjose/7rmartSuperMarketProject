@@ -8,64 +8,15 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Multi browser testing</th></tr>
-<tr><td><a href="#t0">Test2</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">3,011</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">Test1</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">5,598</td><td></td><td></td></tr>
-<tr><td><a href="#t2">Test3</a></td><td class="num">1</td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">9,311</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">2</th><th class="num">0</th><th class="num attn">1</th><th class="num attn">1</th><th class="num">17,920</th><th colspan="2"></th></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">19,490</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Multi browser testing</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test2 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testScript.HomeTest</td><td><a href="#m0">verifyLogout</a></td><td rowspan="1">1777388240054</td><td rowspan="1">124</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">Test1 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testScript.ManageFooterTextTest</td><td><a href="#m1">validateManageFooterText</a></td><td rowspan="1">1777388240178</td><td rowspan="1">2781</td></tr></tbody>
-<tbody id="t2"><tr><th colspan="4">Test3 &#8212; retried</th></tr><tr class="retriedeven"><td rowspan="1">testScript.ManageCategoryTest</td><td><a href="#m2">validateManageCategory</a></td><td rowspan="1">1777388240054</td><td rowspan="1">165</td></tr><tr><th colspan="4">Test3 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testScript.ManageCategoryTest</td><td><a href="#m3">validateManageCategory</a></td><td rowspan="1">1777388242240</td><td rowspan="1">4434</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testScript.HomeTest</td><td><a href="#m0">verifyLogout</a></td><td rowspan="1">1777436888472</td><td rowspan="1">2462</td></tr><tr class="passedodd"><td rowspan="4">testScript.LoginTest</td><td><a href="#m1">verifyTheUserIsAbleToLoginUsingValidCredentials</a></td><td rowspan="1">1777436893263</td><td rowspan="1">1047</td></tr><tr class="passedodd"><td><a href="#m2">verifyTheUserIsUnableToLoginUsingInvalidCredentials</a></td><td rowspan="1">1777436904041</td><td rowspan="1">699</td></tr><tr class="passedodd"><td><a href="#m3">verifyTheUserIsUnableToLoginUsingWrongPassword</a></td><td rowspan="1">1777436896927</td><td rowspan="1">713</td></tr><tr class="passedodd"><td><a href="#m4">verifyTheUserIsUnableToLoginUsingWrongUserName</a></td><td rowspan="1">1777436900141</td><td rowspan="1">724</td></tr></tbody>
 </table>
-<h2>Test2</h2><h3 id="m0">testScript.HomeTest#verifyLogout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file
-	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:156)
-	at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.&lt;init&gt;(ZipInputStreamZipEntrySource.java:94)
-	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:132)
-	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:319)
-	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:290)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:286)
-	at utilities.ExcelUtility.getStringData(ExcelUtility.java:22)
-	at testScript.HomeTest.verifyLogout(HomeTest.java:14)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: java.util.zip.ZipException: Unexpected record signature: 0X0
-	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.getNextZipEntry(ZipArchiveInputStream.java:296)
-	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:152)
-	... 28 more
-... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Test1</h2><h3 id="m1">testScript.ManageFooterTextTest#validateManageFooterText</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Test3</h2><h3 id="m2">testScript.ManageCategoryTest#validateManageCategory</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.io.IOException: Stream Closed
-	at java.base/java.io.FileInputStream.available0(Native Method)
-	at java.base/java.io.FileInputStream.available(FileInputStream.java:473)
-	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:428)
-	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:399)
-	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:119)
-	at java.base/java.io.PushbackInputStream.read(PushbackInputStream.java:197)
-	at org.apache.commons.compress.utils.IOUtils.copyRange(IOUtils.java:330)
-	at org.apache.commons.compress.utils.IOUtils.copyRange(IOUtils.java:301)
-	at org.apache.commons.compress.utils.IOUtils.readRange(IOUtils.java:350)
-	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readRange(ZipArchiveInputStream.java:884)
-	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.getNextZipEntry(ZipArchiveInputStream.java:348)
-	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:152)
-	at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.&lt;init&gt;(ZipInputStreamZipEntrySource.java:94)
-	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:132)
-	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:319)
-	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:290)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:286)
-	at utilities.ExcelUtility.getStringData(ExcelUtility.java:22)
-	at testScript.ManageCategoryTest.validateManageCategory(ManageCategoryTest.java:19)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">testScript.ManageCategoryTest#validateManageCategory</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">testScript.HomeTest#verifyLogout</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testScript.LoginTest#verifyTheUserIsAbleToLoginUsingValidCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">testScript.LoginTest#verifyTheUserIsUnableToLoginUsingInvalidCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">testScript.LoginTest#verifyTheUserIsUnableToLoginUsingWrongPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">testScript.LoginTest#verifyTheUserIsUnableToLoginUsingWrongUserName</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

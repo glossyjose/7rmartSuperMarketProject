@@ -4,6 +4,9 @@ import java.io.IOException;
 
 
 import org.testng.annotations.Test;
+
+import constant.Constant;
+
 import org.testng.Assert;
 
 import pages.AdminUsersPage;
@@ -39,6 +42,6 @@ public class AdminUsersTest extends Base{
 //		adminuserpage.clickSaveButton();
 
 		String alertSuccess=usersPage.verifyAlert();
-		Assert.assertTrue(alertSuccess.contains("User Created Successfully"));
+		Assert.assertTrue(alertSuccess.contains("User Created Successfully"),Constant.ADMINUSEREXISTSMSG);
 	}
 }

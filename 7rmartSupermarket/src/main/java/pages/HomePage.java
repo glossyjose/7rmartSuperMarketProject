@@ -47,9 +47,10 @@ public class HomePage {
 		return new ManageFooterTextPage(driver);
 	}
 	
-	public void clickOnLogout() {
+	public LoginPage clickOnLogout() {
 		admin.click();
 		logout.click();
+		return new LoginPage(driver);
 		
 	}
 }

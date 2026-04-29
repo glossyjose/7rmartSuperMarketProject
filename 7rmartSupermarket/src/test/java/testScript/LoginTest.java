@@ -2,9 +2,11 @@ package testScript;
 
 import java.io.IOException;
 
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constant.Constant;
 import pages.HomePage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
@@ -26,7 +28,7 @@ public class LoginTest extends Base{
 		homepage=loginpage.clickOnSignInBtn();
 		
 		boolean homepage=loginpage.isHomePageDisplayed();
-		Assert.assertTrue(homepage); //testcase will be failed when assert class returns false
+		Assert.assertTrue(homepage, Constant.VALIDCREDENTIALMSG); //testcase will be failed when assert class returns false
 	}
 	@Test(priority=2, groups= {"sanity"},retryAnalyzer = retry.Retry.class,description="This testcase is to validate that the user is unable to login to the web application when wrong password is entered")
 	public void verifyTheUserIsUnableToLoginUsingWrongPassword() throws IOException {
@@ -39,7 +41,7 @@ public class LoginTest extends Base{
 		//loginpage.clickOnSignInBtn();
 		
 		boolean alertmsg=loginpage.isAlertMessageDisplayed();
-		Assert.assertTrue(alertmsg);
+		Assert.assertTrue(alertmsg, Constant.INVALIDPASSWORDMSG);
 	}
 	@Test(priority=3,retryAnalyzer = retry.Retry.class,description="This testcase is to validate that the user is unable to login to the web application when wrong username is entered")
 	public void verifyTheUserIsUnableToLoginUsingWrongUserName() throws IOException {
@@ -52,7 +54,7 @@ public class LoginTest extends Base{
 		//loginpage.clickOnSignInBtn();
 		
 		boolean alertmsg=loginpage.isAlertMessageDisplayed();
-		Assert.assertTrue(alertmsg);
+		Assert.assertTrue(alertmsg,Constant.INVALIDUSERNAMEMSG);
 	}
 	@Test(priority=4, groups= {"sanity"},retryAnalyzer = retry.Retry.class, description="This testcase is to validate that the user is unable to login to the web application when both the credentials are wrong")
 	public void verifyTheUserIsUnableToLoginUsingInvalidCredentials() throws IOException {
@@ -65,6 +67,6 @@ public class LoginTest extends Base{
 		//loginpage.clickOnSignInBtn();
 		
 		boolean alertmsg=loginpage.isAlertMessageDisplayed();
-		Assert.assertTrue(alertmsg);
+		Assert.assertTrue(alertmsg,Constant.INVALIDCREDENTIALMSG);
 	}
 }

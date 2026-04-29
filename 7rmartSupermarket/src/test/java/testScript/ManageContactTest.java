@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constant.Constant;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ManageContactPage;
@@ -35,7 +36,7 @@ public class ManageContactTest extends Base{
 		//managecontact.clickUpdateBtn();
 		
 		String alertSuccess=contactPage.getAlertText();
-		Assert.assertTrue(alertSuccess.contains("Contact Updated Successfully"));
+		Assert.assertTrue(alertSuccess.contains("Contact Updated Successfully"),Constant.CONTACTUPDATEFAILSMSG);
 		
 	}
 }

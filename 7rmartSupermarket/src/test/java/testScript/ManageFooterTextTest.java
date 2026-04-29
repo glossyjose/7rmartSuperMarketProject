@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constant.Constant;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ManageFooterTextPage;
@@ -38,7 +39,7 @@ public class ManageFooterTextTest extends Base{
 		
 		//managefooter.clickUpdateButton();
 		String alertSuccess=footertextPage.getAlertText();
-		Assert.assertTrue(alertSuccess.contains("Footer Text Updated Successfully"));
+		Assert.assertTrue(alertSuccess.contains("Footer Text Updated Successfully"),Constant.FOOTERTEXTFAILSMSG);
 		
 	}
 
