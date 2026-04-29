@@ -7,13 +7,27 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testScript.ManageNewsTest">
+      <class name="testScript.AdminUsersTest">
+        <methods>
+          <include name="verifyAdminUsersPage"/>
+          <include name="browserQuit"/>
+          <include name="browserInitialization"/>
+        </methods>
+      </class> <!-- testScript.AdminUsersTest -->
+      <class name="testScript.ManageContactTest">
+        <methods>
+          <include name="validateManageContactPage"/>
+          <include name="browserQuit"/>
+          <include name="browserInitialization"/>
+        </methods>
+      </class> <!-- testScript.ManageContactTest -->
+      <class name="testScript.ManageCategoryTest">
         <methods>
           <include name="browserQuit"/>
           <include name="browserInitialization"/>
-          <include name="verifyManageNews"/>
+          <include name="validateManageCategory"/>
         </methods>
-      </class> <!-- testScript.ManageNewsTest -->
+      </class> <!-- testScript.ManageCategoryTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
